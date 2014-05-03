@@ -70,6 +70,32 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\ArrowDown.ico" />
+    <Content Include="Resources\ArrowUp.ico" />
+    <Content Include="Resources\bigsmile.gif" />
+    <Content Include="Resources\blush.gif" />
+    <Content Include="Resources\Chat.ico" />
+    <Content Include="Resources\ChatLogo.png" />
+    <Content Include="Resources\cool.gif" />
+    <Content Include="Resources\crying.gif" />
+    <Content Include="Resources\dull.gif" />
+    <Content Include="Resources\evilgrin.gif" />
+    <Content Include="Resources\inlove.gif" />
+    <Content Include="Resources\kiss.gif" />
+    <Content Include="Resources\sadsmile.gif" />
+    <Content Include="Resources\sleepy.gif" />
+    <Content Include="Resources\smile.gif" />
+    <Content Include="Resources\smileIcon.png" />
+    <Content Include="Resources\speechless.gif" />
+    <Content Include="Resources\sweating.gif" />
+    <Content Include="Resources\tongueout.gif" />
+    <Content Include="Resources\wink.gif" />
+    <Content Include="Resources\wondering.gif" />
+    <Content Include="sounds\incomingMsg.wav" />
+    <Content Include="sounds\usrEnter.wav" />
+    <Content Include="sounds\usrLeave.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
