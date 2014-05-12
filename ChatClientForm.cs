@@ -8,5 +8,11 @@ namespace ChatClient3AA
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, System.EventArgs e)
+        {
+            SettingsForm dlg = new SettingsForm();
+            dlg.ShowDialog();
+        }
     }
 }
