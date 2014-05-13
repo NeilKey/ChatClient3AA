@@ -11,7 +11,7 @@ namespace ChatClient3AA
 
         private void button1_Click(object sender, System.EventArgs e)
         {
-            SettingsForm dlg = new SettingsForm();
+            NewAccountForm dlg = new NewAccountForm();
             dlg.ShowDialog();
         }
     }
