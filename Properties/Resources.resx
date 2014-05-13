@@ -175,4 +175,13 @@
   <data name="wondering" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\wondering.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="incomingMsg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\sounds\incomingMsg.wav;System.IO.MemoryStream, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="usrEnter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\sounds\usrEnter.wav;System.IO.MemoryStream, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="usrLeave" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\sounds\usrLeave.wav;System.IO.MemoryStream, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>
