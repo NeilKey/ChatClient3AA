@@ -13,6 +13,7 @@ namespace ChatClient3AA
     {
         public NewAccountForm()
         {
+            // Commento
             InitializeComponent();
 
             // Aggiorna lo stato del button Create

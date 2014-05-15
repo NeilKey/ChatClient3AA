@@ -12,6 +12,7 @@ namespace ChatClient3AA
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // Commento
             String name = UBox.Text;
             String password = PBox.Text;
 
