@@ -11,6 +11,7 @@ namespace ChatClient3AA
 {
     public partial class NewAccountForm : Form
     {
+        Connect c = new Connect();
         public NewAccountForm()
         {
             InitializeComponent();
@@ -89,6 +90,24 @@ namespace ChatClient3AA
         public string Password
         {
             get { return this.passwordText.Text; }
+        }
+
+        private void NewAccountForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void newAccountGroupBox_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Create(object sender, EventArgs e)
+        {
+            String nick_name = nicknameText.Text;
+            String user_name = usernameText.Text;
+            String password = passwordText.Text;
+            c.createNewAccount(nick_name,user_name,password);
         }
     }
 }

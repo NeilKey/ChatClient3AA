@@ -54,6 +54,7 @@
             this.newAccountGroupBox.TabIndex = 0;
             this.newAccountGroupBox.TabStop = false;
             this.newAccountGroupBox.Text = "New Account Data";
+            this.newAccountGroupBox.Enter += new System.EventHandler(this.newAccountGroupBox_Enter);
             // 
             // passwordText
             // 
@@ -116,6 +117,7 @@
             this.newAccountButton.TabIndex = 1;
             this.newAccountButton.Text = "Create";
             this.newAccountButton.UseVisualStyleBackColor = true;
+            this.newAccountButton.Click += new System.EventHandler(this.Create);
             // 
             // cancelButton
             // 
@@ -144,6 +146,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Create New Account";
+            this.Load += new System.EventHandler(this.NewAccountForm_Load);
             this.newAccountGroupBox.ResumeLayout(false);
             this.newAccountGroupBox.PerformLayout();
             this.ResumeLayout(false);
