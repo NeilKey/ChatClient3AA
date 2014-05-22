@@ -5,6 +5,7 @@ namespace ChatClient3AA
 {
     public partial class LoginForm : Form
     {
+        Connect c = new Connect();
         public LoginForm()
         {
             InitializeComponent();
@@ -17,15 +18,19 @@ namespace ChatClient3AA
 
         }
 
-        private void BLClick(object sender, EventArgs e)
-        {
-
-        }
-
         private void BCClick(object sender, EventArgs e)
         {
             UBox.Clear();
             PBox.Clear();
         }
+
+        private void login(object sender, EventArgs e)
+        {
+            String user_name = UBox.Text;
+            String password = PBox.Text;
+            c.loginUser(user_name, password);
+        }
+
+        
     }
 }
