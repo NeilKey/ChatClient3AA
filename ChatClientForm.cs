@@ -9,6 +9,7 @@ namespace ChatClient3AA
         public ChatClientForm()
         {
             InitializeComponent();
+            PopulateListView();
         }
 
         private void ButtonInviaClicked(object sender, EventArgs e)
@@ -51,7 +52,7 @@ namespace ChatClient3AA
 
         private void userListView_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            PopulateListView();
         }
 
         private void PopulateListView()
