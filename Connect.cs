@@ -134,5 +134,27 @@ namespace ChatClient3AA
                 //MessageBox.Show(this, e.Message, "Send Message Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        public void loginUser(String user_name, String password)
+        {
+            String credentials = "Utente:" + user_name + " " + password;
+
+            if (m_sock == null || !m_sock.Connected)
+            {
+                //MessageBox.Show(this, "Must be connected to Send a message!", "Socket Client Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            try
+            {
+                // Converti in byte array (UTF-16, little endian) e invia
+                byte[] bufMsg = Encoding.Unicode.GetBytes(credentials + "\n");
+                m_sock.Send(bufMsg, bufMsg.Length, 0);
+            }
+            catch (Exception e)
+            {
+                //MessageBox.Show(this, e.Message, "Send Message Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
