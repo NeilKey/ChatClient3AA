@@ -146,12 +146,12 @@ namespace ChatClient3AA.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string PasswordUser {
+        public string Passworduser {
             get {
-                return ((string)(this["PasswordUser"]));
+                return ((string)(this["Passworduser"]));
             }
             set {
-                this["PasswordUser"] = value;
+                this["Passworduser"] = value;
             }
         }
     }

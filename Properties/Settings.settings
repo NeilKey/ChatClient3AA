@@ -32,7 +32,7 @@
     <Setting Name="Username" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="PasswordUser" Type="System.String" Scope="User">
+    <Setting Name="Passworduser" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
   </Settings>

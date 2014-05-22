@@ -32,6 +32,10 @@ namespace ChatClient3AA
             {
                 Settings.Default.Username = UBox.Text;
             }
+            if (checkPassword.CheckState != null)
+            {
+                Settings.Default.Passworduser = PBox.Text;
+            }
             
             String user_name = UBox.Text;
             String password = PBox.Text;
