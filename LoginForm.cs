@@ -6,10 +6,11 @@ namespace ChatClient3AA
 {
     public partial class LoginForm : Form
     {
-        Connect c = new Connect();
-        public LoginForm()
+        private Connect c;
+        public LoginForm(Connect c)
         {
             InitializeComponent();
+            this.c = c;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -31,8 +32,9 @@ namespace ChatClient3AA
             if(checkUser.CheckState != null)
             {
                 Settings.Default.Username = UBox.Text;
+                checkPassword.Enabled = true;
             }
-            if (checkPassword.CheckState != null)
+            else if (checkPassword.CheckState != null)
             {
                 Settings.Default.Passworduser = PBox.Text;
             }

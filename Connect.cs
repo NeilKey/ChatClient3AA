@@ -48,7 +48,7 @@ namespace ChatClient3AA
                         SetupReceiveCallback(m_sock);
                         m_flConnected = m_sock.Connected;
                     }
-                    catch (Exception e)
+                    catch (Exception)
                     {
                         //MessageBox.Show(this, e.Message, "Setup Receive Callback Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
@@ -85,17 +85,17 @@ namespace ChatClient3AA
                 if (nBytesRec > 0)
                 {
                     String sReceived = Encoding.Unicode.GetString(m_receiveBuf, 0, nBytesRec);
-                    this.Invoke(m_SetMessage, new String[] { sReceived });
+                    //this.Invoke(m_SetMessage, new String[] { sReceived });
                     SetupReceiveCallback(sock);
                 }
                 else
                 {
-                    this.Invoke(m_CloseConnection, new Socket[] { sock });
+                    //this.Invoke(m_CloseConnection, new Socket[] { sock });
                 }
             }
             catch (SocketException e)
             {
-                if (e.ErrorCode == 10054) this.Invoke(m_CloseConnection, new Socket[] { sock });
+                //if (e.ErrorCode == 10054) this.Invoke(m_CloseConnection, new Socket[] { sock });
             }
             catch (Exception) { }
         }
@@ -113,7 +113,7 @@ namespace ChatClient3AA
             try
             {
                 // Converti in byte array (UTF-16, little endian) e invia
-                byte[] bufMsg = Encoding.Unicode.GetBytes(credentials + "\n");
+                byte[] bufMsg = Encoding.Unicode.GetBytes(credentials);
                 m_sock.Send(bufMsg, bufMsg.Length, 0);
             }
             catch (Exception e)
@@ -135,7 +135,27 @@ namespace ChatClient3AA
             try
             {
                 // Converti in byte array (UTF-16, little endian) e invia
-                byte[] bufMsg = Encoding.Unicode.GetBytes(credentials + "\n");
+                byte[] bufMsg = Encoding.Unicode.GetBytes(credentials);
+                m_sock.Send(bufMsg, bufMsg.Length, 0);
+            }
+            catch (Exception e)
+            {
+                //MessageBox.Show(this, e.Message, "Send Message Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void sendMessage(String message)
+        {
+            if (m_sock == null || !m_sock.Connected)
+            {
+                //MessageBox.Show(this, "Must be connected to Send a message!", "Socket Client Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            try
+            {
+                // Converti in byte array (UTF-16, little endian) e invia
+                byte[] bufMsg = Encoding.Unicode.GetBytes(message);
                 m_sock.Send(bufMsg, bufMsg.Length, 0);
             }
             catch (Exception e)

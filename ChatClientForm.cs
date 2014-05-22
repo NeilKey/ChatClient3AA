@@ -6,20 +6,24 @@ namespace ChatClient3AA
 {
     public partial class ChatClientForm : Form
     {
+        private Connect c;
+
         public ChatClientForm()
         {
             InitializeComponent();
             PopulateListView();
+
+            c = new Connect();
         }
 
         private void ButtonInviaClicked(object sender, EventArgs e)
         {
-            
+            c.sendMessage(inviaBox.Text);
         }
 
         private void loginClick(object sender, EventArgs e)
         {
-            LoginForm loginForm = new LoginForm();
+            LoginForm loginForm = new LoginForm(c);
             loginForm.ShowDialog();
         }
 
@@ -31,7 +35,7 @@ namespace ChatClient3AA
 
         private void newAccountClick(object sender, EventArgs e)
         {
-            NewAccountForm newAccountForm = new NewAccountForm();
+            NewAccountForm newAccountForm = new NewAccountForm(c);
             newAccountForm.ShowDialog();
         }
 

@@ -11,14 +11,16 @@ namespace ChatClient3AA
 {
     public partial class NewAccountForm : Form
     {
-        Connect c = new Connect();
-        public NewAccountForm()
+        private Connect c;
+        public NewAccountForm(Connect c)
         {
             // Commento
             InitializeComponent();
 
             // Aggiorna lo stato del button Create
             UpdateCreateButtonState();
+
+            this.c = c;
         }
 
         private void UpdateCreateButtonState()
