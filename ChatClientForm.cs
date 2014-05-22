@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Windows.Forms;
 
 namespace ChatClient3AA
@@ -33,15 +34,35 @@ namespace ChatClient3AA
             newAccountForm.ShowDialog();
         }
 
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e){}
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+        
+        }
 
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e){}
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+        
+        }
 
-        private void richTextBox2_TextChanged(object sender, EventArgs e){}
+        private void richTextBox2_TextChanged(object sender, EventArgs e)
+        {
+        
+        }
 
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        private void userListView_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void PopulateListView()
+        {
+            userListView.Items.Clear();
+            DataTable myDataTable;
+
+            foreach (DataRow row in myDataTable.Rows)
+            {
+                // userListView.Items.Add();
+            }
         }
     }
 }

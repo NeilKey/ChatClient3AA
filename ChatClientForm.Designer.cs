@@ -123,7 +123,7 @@
             this.userListView.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.userListView.UseCompatibleStateImageBehavior = false;
             this.userListView.View = System.Windows.Forms.View.Details;
-            this.userListView.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            this.userListView.SelectedIndexChanged += new System.EventHandler(this.userListView_SelectedIndexChanged);
             // 
             // userColumnHeader
             // 
