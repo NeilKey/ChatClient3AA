@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ChatClient3AA.Properties;
+using System;
 using System.Windows.Forms;
 
 namespace ChatClient3AA
@@ -27,6 +28,11 @@ namespace ChatClient3AA
 
         private void login(object sender, EventArgs e)
         {
+            if(checkUser.CheckState != null)
+            {
+                Settings.Default.Username = UBox.Text;
+            }
+            
             String user_name = UBox.Text;
             String password = PBox.Text;
             c.loginUser(user_name, password);
