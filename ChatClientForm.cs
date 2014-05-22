@@ -12,7 +12,7 @@ namespace ChatClient3AA
 
         private void ButtonInviaClicked(object sender, EventArgs e)
         {
-
+            
         }
 
         private void loginClick(object sender, EventArgs e)

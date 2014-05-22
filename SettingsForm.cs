@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ChatClient3AA.Properties;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -17,7 +18,7 @@ namespace ChatClient3AA
         private void onSettingFormLoad(object sender, EventArgs e)
         {
             //Loading saved settings
-            /* --> uncomment this section once all the following settins will be created
+            // --> uncomment this section once all the following settins will be created
             convInColor_lbl.ForeColor = Settings.Default.ConvInColor;
             convOutColor_lbl.ForeColor = Settings.Default.ConvOutColor;
             outTextColor_lbl.ForeColor = Settings.Default.OutTextColor;
@@ -27,9 +28,7 @@ namespace ChatClient3AA
 
             langComboBox.Text = Settings.Default.Language;
             hostnameTextBox.Text = Settings.Default.Hostname;
-            portTextBox.Text = Settings.Default.Port;
-             */
-
+            portTextBox.Text = Settings.Default.Port.ToString();
         }
 
         private void onInColorButton(object sender, EventArgs e)
@@ -103,7 +102,7 @@ namespace ChatClient3AA
         private void onSaveButton(object sender, EventArgs e)
         {
             //saving current settings to real settings
-            /* --> uncomment this section once all the following settins will be created
+            // --> uncomment this section once all the following settins will be created
             Settings.Default.ConvInColor = convInColor_lbl.ForeColor;
             Settings.Default.ConvOutColor = convOutColor_lbl.ForeColor;
             Settings.Default.OutTextColor = outTextColor_lbl.ForeColor;
@@ -113,11 +112,10 @@ namespace ChatClient3AA
 
             Settings.Default.Language = langComboBox.Text;
             Settings.Default.Hostname = hostnameTextBox.Text;
-            Settings.Default.Port = portTextBox.Text;
+            Settings.Default.Port = Convert.ToInt32(portTextBox.Text);
             
-            Setting.Default.Save();
-              
-             */
+            Settings.Default.Save();
+            this.Close();
         }
     }
 }

@@ -14,6 +14,7 @@ namespace ChatClient3AA
         Connect c = new Connect();
         public NewAccountForm()
         {
+            // Commento
             InitializeComponent();
 
             // Aggiorna lo stato del button Create
